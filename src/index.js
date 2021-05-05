@@ -132,4 +132,11 @@ export default grapesjs.plugins.add('gjs-preset-webpage', (editor, opts = {}) =>
   // Load styles
   styles(editor, config);
 
+  const dataTypeTrait = {
+    label: "Data Type",
+    name: "data-type", 
+    placeholder: "eg. Text here"
+  };
+  
+  editor.DomComponents.getType("default").model.prototype.defaults.traits.push(dataTypeTrait);
 });
